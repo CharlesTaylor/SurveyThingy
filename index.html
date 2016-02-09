@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script type="text/javascript" src="data.js"></script>
+
     <script type="text/javascript" src="script.js"></script>
     <style>
         body{
@@ -17,15 +17,26 @@
             margin: 0 auto;
             width: 40%;
         }
-
+        #submit{
+            background-color: antiquewhite;
+            vertical-align: middle;
+            margin: 0 auto;
+            width: 100%;
+        }
 
     </style>
 </head>
 <body>
+    <form action="send.php" method="POST">
+        <div id="q">
 
-    <div id="q">
-    
-    </div>
+        </div>
+        <section>
+            <input id="submit" type="submit">
+        </section>
+
+    </form>
+
 
 
     <script>load();</script>
