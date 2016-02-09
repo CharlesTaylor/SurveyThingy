@@ -15,7 +15,7 @@ function Question(question,selections){
 
 Question.prototype.print = function(){
     var sect = document.createElement("section");
-
+    var qq =this.q;
     var ques = document.createElement("p");
     ques.innerHTML = this.q;
     console.log(this.q);
@@ -24,7 +24,7 @@ Question.prototype.print = function(){
     this.s.forEach(function(val){
         var ans = document.createElement("p");
         var rdb = document.createElement("input");
-        rdb.name = "rb";
+        rdb.name =qq ;
         rdb.type ="radio";
         ans.innerHTML = val;
         ans.appendChild(rdb);
@@ -34,8 +34,8 @@ Question.prototype.print = function(){
 };
 
 function load(){
-    var qu ="Is this anket working?";
-    var sel = ["Yes","No","FU"];
-    var qqq = new Question(qu,sel);
-    qqq.print();
+    data.forEach(function(val){
+        var qqq = new Question(val.q,val.s);
+        qqq.print();
+    });
 }
