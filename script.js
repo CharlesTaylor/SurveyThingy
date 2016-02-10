@@ -2,10 +2,6 @@
  * Created by Fatih on 09/02/2016.
  */
 
-
-
-
-
 function Question(question,selections,id){
     this.q = question;
     this.s = selections;
@@ -13,7 +9,7 @@ function Question(question,selections,id){
     console.log(this.q);
     console.log(this.s)
 }
-//TODO Handle Submit
+//TODO Handle Submit--TODO php code + database
 Question.prototype.print = function(){
     var sect = document.createElement("section");
     var qq =this.q;
@@ -26,7 +22,7 @@ Question.prototype.print = function(){
     this.s.forEach(function(val){
         var ans = document.createElement("p");//TODO Instead create a div and put both in
         var rdb = document.createElement("input");
-        rdb.name =id ;//TODO Instead use an ID system to name buttons
+        rdb.name =id ;//DONE Instead use an ID system to name buttons
         rdb.type ="radio";
         ans.innerHTML = val;
         ans.appendChild(rdb);
@@ -64,6 +60,4 @@ function load(){
             count++;
         });
     });
-
-
 }
