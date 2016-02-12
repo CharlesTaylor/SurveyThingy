@@ -1,16 +1,1 @@
-{
-    "Question0":{
-        "q":"This is a question?",
-        "s":["yes","no"]
-    }
-    ,
-    "Question1":{
-        "q":"This is a question?",
-      "s":["yes","no"]
-    }
-    ,
-    "Question2":{
-        "q":"This is a question?",
-        "s":["yes","no"]
-    }
-}
+{"1":{"q":"Will it?","s":["NO","YES"]},"3":{"q":"Some Question Will Go here?","s":["YES","NO"]}}
