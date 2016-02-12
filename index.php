@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <?php
+    require_once("auth.php");
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
-    $mysqli = mysqli_connect("ADDRESS", "USER", "PASS", "survey_database_of_stuff");
+    $mysqli = mysqli_connect($host, $username, $pass, $database);
 
     if (mysqli_connect_errno($mysqli)) {
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -63,6 +64,7 @@
 
     </div>
     <section>
+
         <input id="submit" type="submit">
     </section>
 
